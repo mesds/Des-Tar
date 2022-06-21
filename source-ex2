@@ -1,0 +1,31 @@
+pacote  exercicio2 ;
+
+importar  java . útil . Scanner ;
+
+public  class  FibonacciMain {
+    public  static  void  main ( String [] args ) {
+        Scanner  scanner = novo  Scanner ( System . in );
+        int [] fib = new  int [ 30 ];
+        fib [ 0 ] = 0 ;
+        fib [ 1 ] = 1 ;
+
+        Sistema . fora . println ( "Digite o número que será selecionado se está ou não na sequência de Fibonacci:" );
+        int  val = scanner . nextInt ();
+
+        for ( int  i = 2 ; i < fib . comprimento ; i ++) {
+            fib [ i ] = fib [ i - 2 ] + fib [ i - 1 ];
+        }
+
+        booleano  possui = false ;
+        for ( int  i = 0 ; i < fib . comprimento ; i ++) {
+            if ( fib [ i ] == val ) {
+                possui = verdadeiro ;
+            }
+        }
+        if ( possui == true ) {
+            Sistema . fora . println ( "O valor " + val + " faz parte da sequência de Fibonacci !!!!" );
+        } senão {
+            Sistema . fora . println ( "O valor " + val + " NÃO faz parte da sequência de Fibonacci !!!!" );
+        }
+    }
+}
