@@ -1,0 +1,35 @@
+pacote  exercicio4 ;
+
+ exercicio de importação3 . Faturamento ;
+
+importar  java . texto . Formato Decimal ;
+importar  java . útil . ListaMatriz ;
+importar  java . útil . Lista ;
+
+public  class  FaturamentoMensalMain {
+    public  static  void  main ( String [] args ) {
+        FaturamentoMensal  sp = new  FaturamentoMensal ( "SP" , 67836.43 );
+        FaturamentoMensal  rj = new  FaturamentoMensal ( "RJ" , 36678.66 );
+        FaturamentoMensal  mg = new  FaturamentoMensal ( "MG" , 29229.88 );
+        FaturamentoMensal  es = new  FaturamentoMensal ( "ES" , 27165.48 );
+        FaturamentoMensal  outros = new FaturamentoMensal ( " OUTROS " , 19849.53 ); 
+
+        double  valorTotal = es . getValor () + mg . getValor () + rj . getValor () + sp . getValor () + outros . obterValor ();
+
+        double  % SP = ( sp . getValor () * 100 ) / valorTotal ;
+        double  % RJ = ( rj.getValor ( ) * 100 )/ valorTotal ;
+        double  % MG = ( mg.getValor ( ) * 100 )/ valorTotal ;
+        double %  ES = ( ex . getValor () * 100 ) / valorTotal ;
+        double  %Outros = ( outros . getValor () * 100 ) / valorTotal ;
+
+        //Para não exibir inúmeras casas depois da vírgula, utilizei o Decimal Format para arredondar o valor.
+        Formatador  DecimalFormat = new  DecimalFormat ( "0.00" );
+        Sistema . fora . println ( "======================= TOTAL DE PARTICIPAÇÃO DE CADA ESTADO (%) =============== ========\n" );
+        Sistema . fora . println ( "Estado de São Paulo:\n" + formador . format ( gorSP ) + "% do valor total" );
+        Sistema . fora . println ( Estado do Rio de Janeiro:\n" + formador .format ( gorRJ " ) + "% do valor total" );
+        Sistema . fora . println ( "Estado de Minas Gerais:\n" + formador . format ( gorMG ) + "% do valor total" );
+        Sistema . fora . println ( "Estado de Espirito Santo:\n" + formador . format ( gorES ) + "% do valor total" );
+        Sistema . fora . println ( "Outros estados:\n" + formador . format ( Outros ) + "% do valor total" );
+
+    }
+}
