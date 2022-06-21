@@ -1,0 +1,29 @@
+importar  java . útil . Scanner ;
+
+ classe  pública InverteStringMain {
+    public  static  void  main ( String [] args ) {
+        Scanner  scanner = novo  Scanner ( System . in );
+
+        Sistema . fora . println ( "Digite um texto ou o texto que será invertido:" );
+        String  texto = scanner . próximaLinha ();
+
+        char [] letra = texto . toCharArray ();
+        int  inicio = 0 ;
+        int  fim = letra . comprimento - 1 ;
+        char  letraTemporária ;
+
+        Sistema . fora . println ( "Um texto digitado foi: " + texto );
+
+        while ( fim > inicio ){
+            letraTemporaria = letra [ inicio ];
+            letra [ inicio ] = letra [ fim ];
+            letra [ fim ] = letraTemporária ;
+            fim --;
+            inicio ++;
+        }
+
+        texto = new  String ( letra );
+        Sistema . fora . println ( "A texto ou o texto invertido ficou: " + texto );
+    }
+
+}
