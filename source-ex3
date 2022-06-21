@@ -1,0 +1,76 @@
+pacote  exercicio3 ;
+
+importar  java . útil .*;
+
+public  class  FaturamentoMain {
+    public  static  void  main ( String [] args ) {
+        Lista < Faturamento > faturamentoLista = new  ArrayList <>();
+
+        //Adicionando os dados informados no anexo.
+        lista de faturamento . add ( new  Faturamento ( 1 , 22174.1664d ));
+        lista de faturamento . add ( new  Faturamento ( 2 , 24537.6698d ));
+        lista de faturamento . add ( new  Faturamento ( 3 , 26139.6134d ));
+        lista de faturamento . add ( new  Faturamento ( 4 , 0d ));
+        lista de faturamento . add ( new  Faturamento ( 5 , 0d ));
+        lista de faturamento . add ( new  Faturamento ( 6 , 26742.6612d ));
+        lista de faturamento . add ( new  Faturamento ( 7 , 0d ));
+        lista de faturamento . add ( new  Faturamento ( 8 , 42889.2258d ));
+        lista de faturamento . add ( new  Faturamento ( 9 , 46251.174d ));
+        lista de faturamento . add ( new  Faturamento ( 10 , 11191.4722d ));
+        lista de faturamento . add ( new  Faturamento ( 11 , 0d ));
+        lista de faturamento . add ( new  Faturamento ( 12 , 0d ));
+        lista de faturamento . add ( new  Faturamento ( 13 , 3847.4823d ));
+        lista de faturamento . add ( new  Faturamento ( 14 , 373.7838d ));
+        lista de faturamento . add ( new  Faturamento ( 15 , 2659.7563d ));
+        lista de faturamento . add ( new  Faturamento ( 16 , 48924.2448d ));
+        lista de faturamento . add ( new  Faturamento ( 17 , 18419.2614d ));
+        lista de faturamento . add ( new  Faturamento ( 18 , 0d ));
+        lista de faturamento . add ( new  Faturamento ( 19 , 0d ));
+        lista de faturamento . add ( new  Faturamento ( 20 , 35240.1826d ));
+        lista de faturamento . add ( new  Faturamento ( 21 , 43829.1667d ));
+        lista de faturamento . add ( new  Faturamento ( 22 , 18235.6852d ));
+        lista de faturamento . add ( new  Faturamento ( 23 , 4355.0662d ));
+        lista de faturamento . add ( new  Faturamento ( 24 , 13327.1025d ));
+        lista de faturamento . add ( new  Faturamento ( 25 , 0d ));
+        lista de faturamento . add ( new  Faturamento ( 26 , 0d ));
+        lista de faturamento . add ( new  Faturamento ( 27 , 25681.8318d ));
+        lista de faturamento . add ( new  Faturamento ( 28 , 1718.1221d ));
+        lista de faturamento . add ( new  Faturamento ( 29 , 13220.495d ));
+        lista de faturamento . add ( new  Faturamento ( 30 , 8414.61d ));
+
+
+        double  minimo = faturamentoList . obter ( 0 ). obterValor ();
+        double  maximo = faturamentoLista . obter ( 0 ). obterValor ();
+
+
+        for ( int  i = 0 ; i < i lista de faturamento . tamanho (); ++) {
+            if ( Lista de faturamento . get ( i ). getValor () < minimo ) {
+                mínimo = faturamentoLista . obter ( eu ). obterValor ();
+            }
+        }
+        for ( int  i = 0 ; i < i lista de faturamento . tamanho (); ++) {
+            if ( Lista de faturamento . get ( i ). getValor () > maximo ) {
+                maximo = faturamentoLista . obter ( eu ). obterValor ();
+            }
+        }
+
+         soma dupla = 0 ;
+        for ( int  i = 0 ; i < i lista de faturamento . tamanho (); ++) {
+            soma = soma + lista de faturamento . obter ( eu ). obterValor ();
+        }
+
+        double  mediaMensal = soma / faturamentoList . tamanho ();
+        int  acimaDaMedia = 0 ;
+        for ( int  i = 0 ; i < i lista de faturamento . tamanho (); ++) {
+            if ( Lista de faturamento . get ( i ). getValor () > mediaMensal ) {
+                acimaDaMedia ++;
+            }
+        }
+        //IMPRESSÕES NA TELA
+        Sistema . fora . println ( "O menor valor de faturamento ocorrido em um dia do mês foi: " + minimo );
+        Sistema . fora . println ( "O maior valor de faturamento ocorrido em um dia do mês foi: " + maximo );
+        Sistema . fora . println ( "O total de dias ao qual o faturamento foi acima da média foi: " + acimaDaMedia );
+
+
+    }
+}
